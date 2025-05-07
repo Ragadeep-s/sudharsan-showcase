@@ -1,0 +1,1 @@
+/* Individual project detail page component */
