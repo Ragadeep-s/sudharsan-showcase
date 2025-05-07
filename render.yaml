@@ -2,15 +2,16 @@ services:
   - type: web
     name: sudharsan-server
     env: python
-    buildCommand: ""
-    startCommand: gunicorn app:app
+    buildCommand: "pip install -r requirements.txt"
+    startCommand: "gunicorn app:app"
     plan: free
     rootDir: server
 
-  - type: static
+  - type: web
     name: sudharsan-client
-    env: static
-    buildCommand: npm run build
+    env: node
+    buildCommand: "npm install && npm run build"
+    startCommand: "serve -s build"
     staticPublishPath: build
     plan: free
     rootDir: client
