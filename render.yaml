@@ -1,0 +1,16 @@
+services:
+  - type: web
+    name: sudharsan-server
+    env: python
+    buildCommand: ""
+    startCommand: gunicorn app:app
+    plan: free
+    rootDir: server
+
+  - type: static
+    name: sudharsan-client
+    env: static
+    buildCommand: npm run build
+    staticPublishPath: build
+    plan: free
+    rootDir: client
