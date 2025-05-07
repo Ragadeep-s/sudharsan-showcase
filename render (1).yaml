@@ -1,0 +1,7 @@
+
+services:
+  - type: static
+    name: sudharsan-showcase
+    env: static
+    buildCommand: cd client && npm install && npm run build
+    staticPublishPath: client/build
