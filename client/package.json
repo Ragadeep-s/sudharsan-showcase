@@ -5,10 +5,11 @@
   "dependencies": {
     "react": "^18.0.0",
     "react-dom": "^18.0.0",
-    "react-scripts": "5.0.1"
+    "react-scripts": "5.0.1",
+    "serve": "^14.2.0"            // ✅ Added for serving production build
   },
   "scripts": {
-    "start": "react-scripts start",
+    "start": "serve -s build",    // ✅ Updated for production deployment
     "build": "react-scripts build",
     "test": "react-scripts test",
     "eject": "react-scripts eject"
