@@ -12,6 +12,5 @@ services:
     env: node
     buildCommand: "npm install && npm run build"
     startCommand: "serve -s build"
-    staticPublishPath: build
     plan: free
     rootDir: client
